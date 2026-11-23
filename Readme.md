@@ -443,27 +443,29 @@ Código HTTP: **404 Not Found**
 
 ### FUNCIONALIDADES
 
-IMPLEMENTADAS:
+### Implementadas
 
-Lâmpada: liga ou desliga
-Lâmpada: ajusta o brilho (0 a 100)
-Lâmpada: consulta a situação atual
-TV: liga ou desliga
-TV: aumenta ou diminui o volume
-TV: troca de canal
-TV: consulta a situação atual
-Central: consome as APIs dos dispositivos por requisições HTTP
-Central: consulta todos os dispositivos conectados
-Central: controla individualmente um dispositivo, respeitando as operações de cada tipo
-Central: cria um ambiente ou apaga um ambiente
-Central: adiciona ou remove um dispositivo a um ambiente
-Central: liga ou desliga todos os dispositivos de um ambiente
-Estado de cada dispositivo mantido em memória durante a execução
-Endereços base das APIs dos dispositivos configurados de forma estática no código
-Biblioteca springdoc-openapi para documentar a API dos dispositivos e da central
+- Lâmpada: liga ou desliga
+- Lâmpada: ajusta o brilho (0 a 100)
+- Lâmpada: consulta a situação atual
+- TV: liga ou desliga
+- TV: aumenta ou diminui o volume
+- TV: troca de canal
+- TV: consulta a situação atual
+- Central: consome as APIs dos dispositivos por requisições HTTP
+- Central: consulta todos os dispositivos conectados
+- Central: controla individualmente um dispositivo, respeitando as operações de cada tipo
+- Central: cria um ambiente
+- Central: apaga um ambiente
+- Central: adiciona um dispositivo a um ambiente
+- Central: remove um dispositivo de um ambiente
+- Central: liga ou desliga todos os dispositivos de um ambiente
+- Estado de cada dispositivo mantido em memória durante a execução
+- Endereços base das APIs dos dispositivos configurados de forma estática no código
+- Biblioteca springdoc-openapi para documentar a API dos dispositivos e da central
 
-NÃO IMPLEMENTADAS:
+### Não implementadas
 
-Aplicação sem docker
-Coleção Bruno não utilizada
-Nas respostas de erro, não consegui ocultar o texto grande e filtrar apenas a "default message" do erro, dificultando a localização da mensagem de erro.
+- Aplicação sem Docker (dispensado pelo professor em aula)
+- Coleção Bruno não utilizada (os exemplos estão em blocos curl neste Readme)
+- Nas respostas de erro, não consegui ocultar o texto grande (`trace`) e filtrar apenas a mensagem (`default message`) do erro, dificultando a localização da mensagem de erro

@@ -466,4 +466,4 @@ NÃO IMPLEMENTADAS:
 
 Aplicação sem docker
 Coleção Bruno não utilizada
-Nas respostas de erro, não consegui ocultar o texto grande e filtrar apenas a "default message" do erro
+Nas respostas de erro, não consegui ocultar o texto grande e filtrar apenas a "default message" do erro, dificultando a localização da mensagem de erro.

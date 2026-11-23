@@ -13,7 +13,6 @@ public class Central {
     public static final String LAMPADA = "lampada";
     public static final String TV = "tv";
 
-    // nome do ambiente -> dispositivos que estão nele (Set vazio = ambiente sem dispositivos)
     private final Map<String, Set<String>> ambientes = new HashMap<>();
 
     public Central() {
@@ -23,7 +22,6 @@ public class Central {
         ambientes.put("sala", inicial);
     }
 
-    // aceita só "lampada" ou "tv"; devolve o nome normalizado
     public static String validar(String dispositivo) {
         String d = dispositivo.trim().toLowerCase();
         if (!d.equals(LAMPADA) && !d.equals(TV)) {
@@ -52,13 +50,11 @@ public class Central {
         ambientes.put(chave, new HashSet<>());
     }
 
-    // os dispositivos do ambiente apagado ficam sem ambiente
     public synchronized void apagarAmbiente(String nome) {
         buscar(nome); // lança exceção se não existir
         ambientes.remove(normalizar(nome));
     }
 
-    // adiciona ao ambiente; se estava em outro, sai de lá (move)
     public synchronized void adicionarDispositivo(String nome, String dispositivo) {
         dispositivo = validar(dispositivo);
         Set<String> destino = buscar(nome);
@@ -76,7 +72,6 @@ public class Central {
         }
     }
 
-    // cópia, para quem chamar não alterar o estado interno
     public synchronized Set<String> dispositivosDo(String nome) {
         return new HashSet<>(buscar(nome));
     }
@@ -87,7 +82,6 @@ public class Central {
         return copia;
     }
 
-    // em qual ambiente o dispositivo está (vazio se estiver sem ambiente)
     public synchronized Optional<String> ambienteDoDispositivo(String dispositivo) {
         String d = validar(dispositivo);
         return ambientes.entrySet().stream()

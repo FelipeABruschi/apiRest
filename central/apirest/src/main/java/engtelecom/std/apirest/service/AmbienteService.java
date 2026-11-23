@@ -21,7 +21,6 @@ public class AmbienteService {
     @Autowired
     private TvService tvService;
 
-    // liga ou desliga todos os dispositivos do ambiente
     public Map<String, SituacaoDispositivo> definirLigada(String nome, boolean ligada) {
         Map<String, SituacaoDispositivo> resultado = new LinkedHashMap<>();
 

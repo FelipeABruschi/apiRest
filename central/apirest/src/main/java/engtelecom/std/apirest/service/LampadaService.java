@@ -69,7 +69,7 @@ public class LampadaService {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             switch (response.statusCode()) {
-                case 200 -> { }  // deu certo
+                case 200 -> { }
                 default -> throw new ErroDoDispositivoException(response.statusCode(), response.body());
             }
 
